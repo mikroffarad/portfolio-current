@@ -1,0 +1,67 @@
+.date {
+    @include date-edit("calendar.png", cyan, #0173CC, #0782D7);
+}
+
+.edit {
+    @include date-edit("calendar-edit.png", lime, #1ECD13, #0EDB0F);
+}
+
+.status_completed {
+    @include property("done.png", #69FF97, #2EB62C);
+}
+
+.status_not-completed {
+    @include property("not-done.png", #DB3445, #F71735);
+}
+
+.adaptive_supported {
+    @include property("responsive.png", #05D6D9, #F907FC);
+}
+
+.adaptive_not-supported {
+    @include property("static.png", #FFED00, #FF0000);
+}
+
+.tech-stack {
+    @extend %flex_prop;
+    &:before {
+        @include icon("../img/techstack.png");
+    }
+    .key {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .value span:after {
+        content: ',';
+    }
+
+    .value, span{
+        @extend %flex_prop;
+        margin-right: 5px;
+    }
+    .value span:last-child:after {
+        content: '.';
+    }
+}
+
+.html {
+    @include gradient(#E44D26, #F16529);
+    &::before {
+        @include icon("https://cdn-icons-png.flaticon.com/512/1051/1051277.png");
+    }
+}
+
+.css {
+    @include gradient(#214CE5, #2465F1);
+    &::before {
+        @include icon("https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg");
+    }
+}
+
+.sass {
+    @include gradient(#BF4080, #CF649A);
+    &::before {
+        @include icon("https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg");
+        margin-right: 2px;
+    }
+}
