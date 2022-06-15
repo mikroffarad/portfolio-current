@@ -42,6 +42,9 @@ body {
                 border-radius: 0 variables.$border variables.$border 0;
                 background-color: rgba(0,0,0,0.6);
                 .header {
+                    .header__page-link {
+                        @extend %flex;    
+                    }
                     @extend %flex;
                     margin-bottom: 10px;
                     .logo {
@@ -53,6 +56,7 @@ body {
                         font-family: variables.$title-font, variables.$title-font_category;
                         font-size: variables.$title_font-size;
                         font-weight: 700;
+                        margin-right: 5px;
                     }
                 }
                 .properties {

@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap");
-.container .item .content .content__inner .header, .container .item .content, .container .item, .container, .tech-stack .value, .tech-stack span, .tech-stack, .adaptive_not-supported, .adaptive_supported, .status_not-completed, .status_completed, .edit, .date {
+.container .item .content .content__inner .header, .container .item .content .content__inner .header .header__page-link, .container .item .content, .container .item, .container, .tech-stack .value, .tech-stack span, .tech-stack, .adaptive_not-supported, .adaptive_supported, .status_not-completed, .status_completed, .edit, .date {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,6 +649,7 @@ body {
   font-family: "Titillium Web", sans-serif;
   font-size: 32px;
   font-weight: 700;
+  margin-right: 5px;
 }
 .container .item .content .content__inner .properties {
   line-height: 36px;
