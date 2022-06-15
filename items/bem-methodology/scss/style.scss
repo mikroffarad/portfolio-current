@@ -1,1 +1,7 @@
-@mixin 
+@mixin color($col1) {
+    color: $col1;
+}
+body {
+  @include color(lime);
+  font-size: 64px;
+}
