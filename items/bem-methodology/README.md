@@ -87,4 +87,23 @@ For example:
   - A piece of code is already used again.
   - At the same time, it shouldn't depend on other page's components.
 - Use **element** when:
-  - Piece of code **won't be used again**
+  - Piece of code **won't be used again**.
+## Modifier
+Used for style modifying of block or element. It's useful, when you need **to accent a certain object from lots of the same**.<br/>
+<br/>
+Name of modifier must describe state or appereance of the object.<br/>
+<br/>
+Modifier is **additionally** written to block or element class name by duplicating main class and adding modifier name:
+```html
+<!-- "menu" block -->
+<nav class="menu">
+  <!-- "item" element and "active" modifier -->
+  <a href="" class="menu__item menu__item_active">Home</a>
+  <!-- "item" element -->
+  <a href="" class="menu__item">About Us</a>
+  <!-- "item" element -->
+  <a href="" class="menu__item">Portfolio</a>
+  <!-- "item" element -->
+  <a href="" class="menu__item">Contacts</a>
+</nav>
+```
