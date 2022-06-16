@@ -107,3 +107,16 @@ Modifier is **additionally** written to block or element class name by duplicati
   <a href="" class="menu__item">Contacts</a>
 </nav>
 ```
+## Mix
+Allows to use both block and element in the same object.
+```html
+<!-- "about" block -->
+<div class="about">
+  <!-- "title" element -->
+  <div class="about__title title"></div>
+  <!-- "subtitle" element -->
+  <div class="about__subtitle subtitle"></div>
+</div>
+```
+This approach allows to set external geometry or positioning in element, and, at the same time, keep block generic.<br>
+Thus, block is independent and can be reused.
