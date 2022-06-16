@@ -38,3 +38,53 @@ Blocks can be nested. Any nesting level is allowed. Example:
   <div class="subtitle"></div>
 </div>
 ```
+## Element
+**Element** — integral part of the block. Can't be used apart!<br/>
+<br/>
+Name of element also must answer the question *«What is it?»*.<br/>
+<br/>
+It has following syntax **(2 underscores)**:
+```html
+<!-- "menu" block -->
+<nav class="menu">
+  <!-- "link" element of "menu" block -->
+  <a href="" class="menu__link"></a>
+  <!-- "link" element of "menu" block -->
+  <a href="" class="menu__link"></a>
+  <!-- "link" element of "menu" block -->
+  <a href="" class="menu__link"></a>
+  <!-- "link" element of "menu" block -->
+  <a href="" class="menu__link"></a>
+</nav>
+```
+Blocks can be nested. Any nesting level is allowed.<br/>
+Element is always a part of the block. **Hierarchy naming is not allowed!**<br/>
+For example:
+```html
+<!-- Correct -->
+<!-- "row" block -->
+<div class="row">
+  <!-- "column" element -->
+  <div class="row__column">
+    <!-- "item" element -->
+    <div class="row__item"></div>
+  </div>
+</div>
+
+<!-- Incorrect -->
+<!-- "row" block -->
+<div class="row">
+  <!-- "column" element -->
+  <div class="row__column">
+    <!-- "item" element -->
+    <div class="row__column__item"></div>
+  </div>
+</div>
+```
+
+## Usage tips for block and element:
+- Use **block** when:
+  - A piece of code is already used again.
+  - At the same time, it shouldn't depend on other page's components.
+- Use **element** when:
+  - Piece of code **won't be used again**
