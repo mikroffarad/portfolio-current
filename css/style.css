@@ -1,47 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap");
-.container .item .content .content__inner .header, .container .item .content .content__inner .header .header__page-link, .container .item .content, .container .item, .container, .tech-stack .value, .tech-stack span, .tech-stack, .adaptive_not-supported, .adaptive_supported, .status_not-completed, .status_completed, .edit, .date {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.tech-stack .value, .tech-stack span, .tech-stack, .adaptive_not-supported, .adaptive_supported, .status_not-completed, .status_completed, .edit, .date {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-@-webkit-keyframes flip {
-  0% {
-    background-position: 0% 100%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
-}
-
-@keyframes flip {
-  0% {
-    background-position: 0% 100%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 100%;
-  }
-}
 /*Null styling*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto&family=Water+Brush&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -131,56 +89,108 @@ h6 {
 }
 
 /*--------------------*/
-@media screen and (max-width: 1250px) {
-  .content {
-    max-width: 600px !important;
-    width: 100% !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+.container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #29539b;
+  background-image: -o-linear-gradient(135deg, #29539b 0%, #1e3b70 74%);
+  background-image: linear-gradient(315deg, #29539b 0%, #1e3b70 74%);
+  text-align: center;
+  font-size: 50px;
+  line-height: 70px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.container .container__text .link {
+  font-family: "Open Sans", sans-serif;
+}
+.container .container__text .link .google {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 80px;
+}
+.container .container__text .link .google li:nth-child(3n+0) {
+  color: #F7B529;
+}
+.container .container__text .link .google li:nth-child(2n+2) {
+  color: #FF3E30;
+}
+.container .container__text .link .google li:nth-child(3n+1) {
+  color: #176BEF;
+}
+.container .container__text .link .google li:nth-child(5n+0) {
+  color: #179C52;
+}
+.container .container__text .link .ddg {
+  font-size: 60px;
+  background: url(../img/icons8-duckduckgo-64.png) 0px no-repeat;
+  padding-left: 64px;
+}
+.container .container__text .link .ddg li {
+  background: -webkit-linear-gradient(#1B6BFB, #C422FA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container .container__text p span {
+  color: #DC84AE;
+  font-family: "Water Brush", cursive;
+  font-weight: 700;
+}
+
+.container .container__text .link .ddg, .container .container__text p span {
+  -webkit-animation: hue 5s linear infinite;
+          animation: hue 5s linear infinite;
+}
+@-webkit-keyframes hue {
+  to {
+    -webkit-filter: hue-rotate(1turn);
+            filter: hue-rotate(1turn);
+  }
+}
+@keyframes hue {
+  to {
+    -webkit-filter: hue-rotate(1turn);
+            filter: hue-rotate(1turn);
+  }
+}
+
+.container .container__text .link .google, .container .container__text .link .ddg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 432px) {
+  .ddg li {
+    font-size: 50px;
   }
 
-  .image {
-    margin-right: 0 !important;
+  body {
+    height: 100%;
   }
-  .image img {
-    width: 100% !important;
-    border-radius: 30px 30px 0 0 !important;
-    margin-bottom: 5px !important;
-  }
-
-  .content__inner {
-    max-width: 100% !important;
-    border-radius: 0 0 30px 30px !important;
-    height: -webkit-fit-content !important;
-    height: -moz-fit-content !important;
-    height: fit-content !important;
-    padding: 5px;
-  }
-}
-@media screen and (max-width: 625px) {
-  .item {
-    max-width: 100% !important;
-  }
-}
-@media screen and (max-width: 625px) {
-  .item {
-    font-size: 22px;
-  }
-  .item .header .logo {
-    width: 33px !important;
-  }
-  .item .header h2 {
-    font-size: 30px !important;
-  }
-}
-@media screen and (max-width: 590px) {
-  .date .key, .edit .key {
-    width: 155px !important;
-  }
-}
-@media screen and (max-width: 590px) {
+}{
+  text-align: center;
+  font-size: 14px;
+  max-width: 688px;
+  color: #05386B;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0 auto;
+}media screen and (max-width: 590px) {
   .tech-stack .value {
     margin-left: 37px;
   }
@@ -256,6 +266,7 @@ h6 {
 }
 .date .value {
   background: -webkit-gradient(linear, left top, left bottom, from(#0173CC), to(#0782D7));
+  background: -o-linear-gradient(#0173CC, #0782D7);
   background: linear-gradient(#0173CC, #0782D7);
 }
 
@@ -275,6 +286,7 @@ h6 {
 }
 .edit .value {
   background: -webkit-gradient(linear, left top, left bottom, from(#1ECD13), to(#0EDB0F));
+  background: -o-linear-gradient(#1ECD13, #0EDB0F);
   background: linear-gradient(#1ECD13, #0EDB0F);
 }
 
@@ -292,6 +304,7 @@ h6 {
   margin-right: 5px;
 }
 .status_completed .value {
+  background: -o-linear-gradient(315deg, #69FF97 10%, #2EB62C 100%);
   background: linear-gradient(135deg, #69FF97 10%, #2EB62C 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -317,6 +330,7 @@ h6 {
   margin-right: 5px;
 }
 .status_not-completed .value {
+  background: -o-linear-gradient(315deg, #DB3445 10%, #F71735 100%);
   background: linear-gradient(135deg, #DB3445 10%, #F71735 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -342,6 +356,7 @@ h6 {
   margin-right: 5px;
 }
 .adaptive_supported .value {
+  background: -o-linear-gradient(315deg, #05D6D9 10%, #F907FC 100%);
   background: linear-gradient(135deg, #05D6D9 10%, #F907FC 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -367,6 +382,7 @@ h6 {
   margin-right: 5px;
 }
 .adaptive_not-supported .value {
+  background: -o-linear-gradient(315deg, #FFED00 10%, #FF0000 100%);
   background: linear-gradient(135deg, #FFED00 10%, #FF0000 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -402,6 +418,7 @@ h6 {
 }
 
 .html {
+  background: -o-linear-gradient(315deg, #E44D26 10%, #F16529 100%);
   background: linear-gradient(135deg, #E44D26 10%, #F16529 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -423,6 +440,7 @@ h6 {
 }
 
 .css {
+  background: -o-linear-gradient(315deg, #214CE5 10%, #2465F1 100%);
   background: linear-gradient(135deg, #214CE5 10%, #2465F1 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -444,6 +462,7 @@ h6 {
 }
 
 .sass {
+  background: -o-linear-gradient(315deg, #BF4080 10%, #CF649A 100%);
   background: linear-gradient(135deg, #BF4080 10%, #CF649A 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -473,6 +492,7 @@ h6 {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#9435F2), color-stop(25%, #1B78F2), color-stop(50%, #27538C), color-stop(75%, #F2AC29), to(#F23030));
+  background: -o-linear-gradient(left, #9435F2 0%, #1B78F2 25%, #27538C 50%, #F2AC29 75%, #F23030 100%);
   background: linear-gradient(to right, #9435F2 0%, #1B78F2 25%, #27538C 50%, #F2AC29 75%, #F23030 100%);
   background-size: 1200% 1200%;
   border-radius: 30px;
@@ -480,6 +500,7 @@ h6 {
           animation: flip 10s linear infinite;
 }
 .sass_item h2 {
+  background: -o-linear-gradient(315deg, #BF4080 10%, #CF649A 100%);
   background: linear-gradient(135deg, #BF4080 10%, #CF649A 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -499,6 +520,7 @@ h6 {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#034C8C), color-stop(25%, #020873), color-stop(50%, #8C4303), color-stop(75%, #F20505), to(#F2F2F2));
+  background: -o-linear-gradient(left, #034C8C 0%, #020873 25%, #8C4303 50%, #F20505 75%, #F2F2F2 100%);
   background: linear-gradient(to right, #034C8C 0%, #020873 25%, #8C4303 50%, #F20505 75%, #F2F2F2 100%);
   background-size: 1200% 1200%;
   border-radius: 30px;
@@ -506,6 +528,7 @@ h6 {
           animation: flip 10s linear infinite;
 }
 .pseudo-classes_elements_item h2 {
+  background: -o-linear-gradient(315deg, #00ffff 10%, #F20505 100%);
   background: linear-gradient(135deg, #00ffff 10%, #F20505 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -525,6 +548,7 @@ h6 {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#592529), color-stop(25%, #4666A6), color-stop(50%, #88BFBA), color-stop(75%, #736848), to(#F2F2F2));
+  background: -o-linear-gradient(left, #592529 0%, #4666A6 25%, #88BFBA 50%, #736848 75%, #F2F2F2 100%);
   background: linear-gradient(to right, #592529 0%, #4666A6 25%, #88BFBA 50%, #736848 75%, #F2F2F2 100%);
   background-size: 1200% 1200%;
   border-radius: 30px;
@@ -532,6 +556,7 @@ h6 {
           animation: flip 10s linear infinite;
 }
 .travel-blog_item h2 {
+  background: -o-linear-gradient(315deg, #FF757C 10%, #15BDB1 100%);
   background: linear-gradient(135deg, #FF757C 10%, #15BDB1 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -552,6 +577,7 @@ h6 {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#F280B6), color-stop(25%, #AE4AD9), color-stop(50%, #6F23D9), color-stop(75%, #5214D9), to(#7FBF1F));
+  background: -o-linear-gradient(left, #F280B6 0%, #AE4AD9 25%, #6F23D9 50%, #5214D9 75%, #7FBF1F 100%);
   background: linear-gradient(to right, #F280B6 0%, #AE4AD9 25%, #6F23D9 50%, #5214D9 75%, #7FBF1F 100%);
   background-size: 1200% 1200%;
   border-radius: 30px;
@@ -559,6 +585,7 @@ h6 {
           animation: flip 10s linear infinite;
 }
 .gradient-statistics_item h2 {
+  background: -o-linear-gradient(315deg, #5AAAE7 10%, #FF5023 100%);
   background: linear-gradient(135deg, #5AAAE7 10%, #FF5023 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -578,6 +605,7 @@ h6 {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#A7BAF2), color-stop(25%, #62D995), color-stop(50%, #A7F2C8), color-stop(75%, #D9933D), to(#F2F2F2));
+  background: -o-linear-gradient(left, #A7BAF2 0%, #62D995 25%, #A7F2C8 50%, #D9933D 75%, #F2F2F2 100%);
   background: linear-gradient(to right, #A7BAF2 0%, #62D995 25%, #A7F2C8 50%, #D9933D 75%, #F2F2F2 100%);
   background-size: 1200% 1200%;
   border-radius: 30px;
@@ -585,6 +613,7 @@ h6 {
           animation: flip 10s linear infinite;
 }
 .doo-layout_item h2 {
+  background: -o-linear-gradient(315deg, #64E5A6 10%, #ACBEFB 100%);
   background: linear-gradient(135deg, #64E5A6 10%, #ACBEFB 100%);
   background-size: 400% 400%;
   -webkit-animation: flip 5s ease infinite;
@@ -675,9 +704,11 @@ body {
 }
 .container .item:hover {
   -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
