@@ -98,7 +98,7 @@ Modifier is **additionally** written to block or element class name by duplicati
 <!-- "menu" block -->
 <nav class="menu">
   <!-- "item" element and "active" modifier -->
-  <a href="" class="menu__item menu__item_active">Home</a>
+  <a href="" class="menu__item menu__item--active">Home</a>
   <!-- "item" element -->
   <a href="" class="menu__item">About Us</a>
   <!-- "item" element -->
